@@ -13,8 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bw.movie.contract.IBaseView;
 
+import butterknife.ButterKnife;
+
 public abstract class BaseActivity <P extends BasePresenter>extends AppCompatActivity implements IBaseView {
-    private P presenter;
+    public P presenter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,7 @@ public abstract class BaseActivity <P extends BasePresenter>extends AppCompatAct
         if (presenter!=null) {
             presenter.attach(this);
         }
+        ButterKnife.bind(this);
         initView();
         initData();
     }

@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 .add(R.id.frame,fragmentList.get(1))
                 .add(R.id.frame,fragmentList.get(2))
                 .show(fragmentList.get(0))
-                .show(fragmentList.get(1))
-                .show(fragmentList.get(2))
+                .hide(fragmentList.get(1))
+                .hide(fragmentList.get(2))
                 .commit();
     }
     @OnClick({R.id.home, R.id.cinema, R.id.my})
