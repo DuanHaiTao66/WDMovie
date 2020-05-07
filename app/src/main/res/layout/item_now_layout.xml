@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:background="#1E2444"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/now_sdv"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            fresco:placeholderImage="@mipmap/ic_launcher"
+            fresco:failureImage="@mipmap/ic_launcher_round"
+            fresco:roundedCornerRadius="5dp"
+            />
+        <TextView
+            android:id="@+id/zheng_movie_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="的计算宽度"
+            android:textColor="#ffFf"
+            android:layout_marginLeft="35dp"
+            />
+        <TextView
+            android:id="@+id/zheng_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="的计算宽度"
+            android:textColor="#ffFf"
+            android:layout_marginLeft="22dp"
+            />
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_botton"
+            android:text="购票"
+            android:textColor="#fff"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            />
+    </LinearLayout>
+</LinearLayout>

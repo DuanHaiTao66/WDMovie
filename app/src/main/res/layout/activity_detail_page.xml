@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#141931"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".DetailPageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="500dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="101dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="75dp"
+                android:text="9.5分"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/pinglun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:text="都开始的时刻到了"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-75dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text="的思考角度看是"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/detail_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="15dp"
+                    android:text="的思考角度看是"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/detail_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="15dp"
+                    android:text="的思考角度看是"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="75dp"
+                android:orientation="vertical">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:text="未关注"
+                    android:button="@null"
+                    android:id="@+id/cb_aixin"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="120dp"
+                    android:drawableTop="@mipmap/aixin"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="-45dp"
+            android:layout_height="50dp">
+            <Button
+                android:id="@+id/write_movie_comment"
+                android:layout_width="150dp"
+                android:layout_height="39dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="#E8BE1A"
+                android:text="写影评"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/buy_cinemaTicket"
+                android:layout_width="210dp"
+                android:layout_height="39dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/colorAccent"
+                android:text="选座购票"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <com.androidkun.xtablayout.XTabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:xTabTextColor="#fff"
+            app:xTabIndicatorWidth="80dp"
+            app:xTabIndicatorHeight="2dp"
+            app:xTabIndicatorColor="@color/colorAccent"
+            ></com.androidkun.xtablayout.XTabLayout>
+       <androidx.viewpager.widget.ViewPager
+           android:id="@+id/vp"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="9"
+           ></androidx.viewpager.widget.ViewPager>
+    </LinearLayout>-->
+
+
+</LinearLayout>

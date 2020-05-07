@@ -81,6 +81,7 @@ public class LoginActivity extends BaseActivity<LoginPresenterImpl> implements L
             if (loginBean.getStatus().equals("0000")){
                 Toast.makeText(this, ""+loginBean.getMessage(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                intent.putExtra("head",loginBean.getResult().getUserInfo().getHeadPic());
                 startActivity(intent);
             }
         }
