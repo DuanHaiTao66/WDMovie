@@ -57,4 +57,16 @@ public interface Api {
     * 根据区域查询影院
     * http://mobile.bwstudent.com/movieApi/cinema/v2/findCinemaByRegion*/
     String RIGHTURL = "cinema/v2/findCinemaByRegion";
+
+    /*
+    * 查询影院详情
+    * http://mobile.bwstudent.com/movieApi/cinema/v1/findCinemaInfo*/
+    String CINEMADETAIL = "cinema/v1/findCinemaInfo";
+
+    /*
+     影院评价
+     http://mobile.bwstudent.com/movieApi/cinema/v1/findAllCinemaComment
+    * */
+    String CINEMAEVALUATE = "cinema/v1/findAllCinemaComment";
+
 }

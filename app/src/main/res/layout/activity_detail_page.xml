@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".DetailPageActivity">
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -82,23 +82,23 @@
             </LinearLayout>
 
             <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="75dp"
+            android:orientation="vertical">
+            <CheckBox
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="75dp"
-                android:orientation="vertical">
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:text="未关注"
-                    android:button="@null"
-                    android:id="@+id/cb_aixin"
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="120dp"
-                    android:drawableTop="@mipmap/aixin"
-                    android:layout_marginTop="15dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
+                android:text="未关注"
+                android:button="@null"
+                android:id="@+id/cb_aixin"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="120dp"
+                android:drawableTop="@mipmap/xihuan_false"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/btn_linearLayout"
@@ -128,8 +128,8 @@
                 android:textSize="15dp" />
         </LinearLayout>
     </LinearLayout>
-
-    <!--<LinearLayout
+-->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:orientation="vertical"
         android:layout_height="wrap_content">
@@ -149,7 +149,7 @@
            android:layout_height="0dp"
            android:layout_weight="9"
            ></androidx.viewpager.widget.ViewPager>
-    </LinearLayout>-->
+    </LinearLayout>
 
 
 </LinearLayout>

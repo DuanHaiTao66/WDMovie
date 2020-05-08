@@ -6,6 +6,8 @@ package com.bw.movie.api;
  *@Description:${DESCRIPTION}
  **/
 
+import com.bw.movie.bean.CinemaDetailBean;
+import com.bw.movie.bean.CinemaEvaluateBean;
 import com.bw.movie.bean.CodeBean;
 import com.bw.movie.bean.DetailBean;
 import com.bw.movie.bean.GGBean;
@@ -80,4 +82,16 @@ public interface ApiService {
 
     @GET(Api.RIGHTURL)
     Observable<RightBean>getRight(@Query("regionId") int regionId);
+
+    @GET(Api.CINEMADETAIL)
+    Observable<CinemaDetailBean>getCinemaDetail(@Header("userId")int userId,
+                                                @Header("sessionId")String sessionId,
+                                                @Query("cinemaId")int cinemaId);
+
+    @GET(Api.CINEMAEVALUATE)
+    Observable<CinemaEvaluateBean>getCinemaEvaluate(@Header("userId")int userId,
+                                                    @Header("sessionId")String sessionId,
+                                                    @Query("cinemaId") int cinemaId,
+                                                    @Query("page") int page,
+                                                    @Query("count") int count);
 }

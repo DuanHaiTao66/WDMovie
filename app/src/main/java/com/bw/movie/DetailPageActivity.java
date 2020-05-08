@@ -8,8 +8,13 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
+import com.androidkun.xtablayout.XTabLayout;
 import com.bumptech.glide.Glide;
 import com.bw.movie.base.BaseActivity;
 import com.bw.movie.bean.DetailBean;
@@ -30,14 +35,15 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
 public class DetailPageActivity extends BaseActivity<DetailPresenterImpl> implements DetailPageContract.View {
 
-   /* @BindView(R.id.vp)
+    @BindView(R.id.vp)
     ViewPager vp;
     @BindView(R.id.tab)
-    XTabLayout tab;*/
+    XTabLayout tab;
 
-    @BindView(R.id.detail_image)
+  /*  @BindView(R.id.detail_image)
     ImageView detailImage;
     @BindView(R.id.score)
     TextView score;
@@ -52,7 +58,7 @@ public class DetailPageActivity extends BaseActivity<DetailPresenterImpl> implem
     @BindView(R.id.write_movie_comment)
     Button writeMovieComment;
     @BindView(R.id.cb_aixin)
-    CheckBox cbAixin;
+    CheckBox cbAixin;*/
 
     private List<String> list = new ArrayList<>();
     private List<Fragment> fragmentList = new ArrayList<>();
@@ -77,7 +83,7 @@ public class DetailPageActivity extends BaseActivity<DetailPresenterImpl> implem
         fragmentList.add(new YuGaoFragment());
         fragmentList.add(new GuZhaoFragment());
         fragmentList.add(new YingPingFragment());
-       /* vp.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
+        vp.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @NonNull
             @Override
             public Fragment getItem(int position) {
@@ -95,12 +101,12 @@ public class DetailPageActivity extends BaseActivity<DetailPresenterImpl> implem
                 return list.get(position);
             }
         });
-        tab.setupWithViewPager(vp);*/
+        tab.setupWithViewPager(vp);
         initListener();
     }
 
     private void initListener() {
-        writeMovieComment.setOnClickListener(new View.OnClickListener() {
+      /*  writeMovieComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(DetailPageActivity.this, PingLunActivity.class));
@@ -117,7 +123,7 @@ public class DetailPageActivity extends BaseActivity<DetailPresenterImpl> implem
                     cbAixin.setText("未关注");
                 }
             }
-        });
+        });*/
     }
 
     @Override
@@ -127,7 +133,7 @@ public class DetailPageActivity extends BaseActivity<DetailPresenterImpl> implem
 
     @Override
     public void success(Object obj) {
-        if (obj instanceof DetailBean) {
+       /* if (obj instanceof DetailBean) {
             DetailBean detailBean = (DetailBean) obj;
             DetailBean.ResultBean result = detailBean.getResult();
             Glide.with(this).load(result.getImageUrl()).into(detailImage);
@@ -138,7 +144,7 @@ public class DetailPageActivity extends BaseActivity<DetailPresenterImpl> implem
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MMM-dd");
             String format = simpleDateFormat.format(result.getReleaseTime());
             detailData.setText(format + "\t\t中国大陆上映");
-        }
+        }*/
     }
 
     @Override

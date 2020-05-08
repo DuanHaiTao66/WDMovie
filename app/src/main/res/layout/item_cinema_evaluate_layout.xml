@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="25dp"
+        android:layout_height="wrap_content">
+
+       <com.facebook.drawee.view.SimpleDraweeView
+           android:id="@+id/comment_sdv"
+           android:layout_width="80dp"
+           android:layout_height="80dp"
+           fresco:roundedCornerRadius="50dp"
+           />
+        <TextView
+            android:id="@+id/comment_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="几十块的接口"
+            android:layout_marginTop="45dp"
+            android:textColor="#ffff"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/comment_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#ffff"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="150dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/comment_nr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textColor="#ffff"
+        android:textSize="15dp"
+        />
+</LinearLayout>

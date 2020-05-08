@@ -7,6 +7,7 @@ package com.bw.movie.adapter.cinemaadapter;
  **/
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bw.movie.CinemaDetailActivity;
 import com.bw.movie.R;
 import com.bw.movie.bean.RecommendBean;
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -46,6 +48,12 @@ public class RecommendAdapter extends RecyclerView.Adapter<RecommendAdapter.Reco
         holder.recommendSdv.setImageURI(list.get(position).getLogo());
         holder.recommendName.setText(list.get(position).getName());
         holder.recommendAddress.setText(list.get(position).getAddress());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, CinemaDetailActivity.class));
+            }
+        });
 
     }
 

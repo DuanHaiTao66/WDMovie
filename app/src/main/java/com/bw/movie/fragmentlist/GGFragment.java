@@ -24,8 +24,6 @@ import java.util.List;
 import butterknife.BindView;
 
 public class GGFragment extends BaseFragment<GGPresenterImpl> implements GGContract.View {
-
-
     @BindView(R.id.gg_rv)
     RecyclerView ggRv;
 
